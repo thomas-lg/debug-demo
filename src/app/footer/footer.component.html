@@ -1,0 +1,21 @@
+<div class="footer">
+  <button
+    *ngIf="previous"
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-angle-left"
+    class="p-button-rounded p-button-secondary p-button-text p-button-lg"
+    [routerLink]="previous"
+  ></button>
+  <button
+    *ngIf="next"
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-angle-right"
+    class="p-button-rounded p-button-primary p-button-text p-button-lg"
+    [class.popped]="popped"
+    [routerLink]="next"
+  ></button>
+</div>

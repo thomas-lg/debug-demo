@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  .content {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+    }
+    h2 {
+      display: flex;
+      color: var(--primary-color);
+      justify-content: center;
+      flex: 1;
+      font-size: 3rem;
+    }
+  }
+}

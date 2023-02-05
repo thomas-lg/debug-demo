@@ -1,0 +1,47 @@
+html {
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--surface-ground);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100vh;
+}
+
+app-root {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+  display: block;
+}
+
+.p-chip {
+  &.secondary {
+    color: var(--text-color-secondary);
+  }
+}
+
+.popped {
+  animation: popped 2500ms infinite;
+}
+
+@keyframes popped {
+  0% {
+    box-shadow: 0 0 -10px var(--primary-color);
+  }
+  40% {
+    box-shadow: 0 0 20px var(--primary-color);
+  }
+  60% {
+    box-shadow: 0 0 20px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 -10px var(--primary-color);
+  }
+}

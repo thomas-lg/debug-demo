@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="content">
+    <div class="text">
+      <h1>debugger🟠</h1>
+    </div>
+
+    <div class="action">
+      <button
+        pButton
+        pRipple
+        label="console.log(!)"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="log()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="console.table(!) with async task"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="logTable()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="stackTrace"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="stackTrace()"
+      ></button>
+    </div>
+    <div class="chips">
+      <p-chip label="Shortcuts"></p-chip>
+      <p-chip label="Page"></p-chip>
+      <p-chip label="Breakpoint"></p-chip>
+      <p-chip label="Watch"></p-chip>
+      <p-chip label="Stack trace"></p-chip>
+      <p-chip label="Step over"></p-chip>
+      <p-chip label="Step into"></p-chip>
+      <p-chip label="Deactivate"></p-chip>
+    </div>
+    <div class="chips">
+      <p-chip label="HTML Force State" styleClass="secondary"></p-chip>
+      <p-chip
+        label="Event listener breakpoint"
+        styleClass="secondary"
+        [removable]="true"
+      ></p-chip>
+      <p-chip label="Throttling" styleClass="secondary"></p-chip>
+    </div>
+  </div>
+  <app-footer previous="/console-log" next="/whats-more"></app-footer>
+</div>

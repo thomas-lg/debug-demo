@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  padding: 0.5rem;
+  a {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    font-size: 0.5rem;
+    text-decoration: none;
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+}

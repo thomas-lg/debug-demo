@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="content">
+    <div class="text">
+      <h1>console.⚡</h1>
+    </div>
+    <div class="action">
+      <button
+        pButton
+        pRipple
+        label="console.log(!)"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="log()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="console.error(!)"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="logError()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="console.table(!)"
+        type="button"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="logTable()"
+      ></button>
+
+      <span class="p-buttonset">
+        <button
+          pButton
+          pRipple
+          label="console.time(?)"
+          icon="pi pi-clock"
+          class="p-button-rounded p-button-primary p-button-lg"
+          (click)="logTime()"
+        ></button>
+        <button
+          pButton
+          pRipple
+          label="console.time(?)"
+          icon="pi pi-stop-circle"
+          class="p-button-rounded p-button-primary p-button-lg"
+          (click)="logTimeEnd()"
+        ></button>
+      </span>
+      <button
+        pButton
+        pRipple
+        label="console.group(?) + console.groupEnd(?)"
+        icon="pi pi-folder-open"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="logGroup()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="console.assert(!)"
+        class="p-button-rounded p-button-primary p-button-lg"
+        (click)="logAssertFalse()"
+      ></button>
+    </div>
+  </div>
+  <app-footer previous="/home" next="/debug"></app-footer>
+</div>
