@@ -8,9 +8,8 @@ describe('ConsoleLogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConsoleLogComponent ]
-    })
-    .compileComponents();
+      declarations: [ConsoleLogComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConsoleLogComponent);
     component = fixture.componentInstance;

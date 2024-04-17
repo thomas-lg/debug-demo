@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { faker } from '@faker-js/faker';
-import { filter, from, map, Observable, toArray } from 'rxjs';
+import { filter, from, map, Observable, Subscription, toArray } from 'rxjs';
 import { User } from '../user.model';
 
 @Component({
@@ -8,8 +8,9 @@ import { User } from '../user.model';
   templateUrl: './debug.component.html',
   styleUrls: ['./debug.component.scss'],
 })
-export class DebugComponent {
+export class DebugComponent implements OnDestroy {
   users: User[] = [];
+  sub?: Subscription;
 
   createUser = () => ({
     name: faker.name.fullName(),
@@ -27,7 +28,6 @@ export class DebugComponent {
         address: faker.address.streetAddress(),
       },
     ];
-    debugger;
     return from(users);
   };
 
@@ -38,7 +38,7 @@ export class DebugComponent {
 
   logTable() {
     const users = this.createUsers();
-    users
+    this.sub = users
       .pipe(
         filter((user) => !user.bio),
         map((user) => {
@@ -51,7 +51,7 @@ export class DebugComponent {
             email: newMail,
           };
         }),
-        toArray()
+        toArray(),
       )
       .subscribe((usersFiltered) => {
         if (!usersFiltered.some((user) => user.bio)) {
@@ -69,4 +69,8 @@ export class DebugComponent {
     }
     return this.stackTrace(++step);
   };
+
+  ngOnDestroy() {
+    this.sub?.unsubscribe();
+  }
 }

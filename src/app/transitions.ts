@@ -13,7 +13,7 @@ export const left = [
       ],
       {
         optional: true,
-      }
+      },
     ),
     query(
       ':leave',
@@ -23,7 +23,7 @@ export const left = [
       ],
       {
         optional: true,
-      }
+      },
     ),
   ]),
 ];
@@ -41,7 +41,7 @@ export const right = [
       ],
       {
         optional: true,
-      }
+      },
     ),
     query(
       ':leave',
@@ -51,7 +51,7 @@ export const right = [
       ],
       {
         optional: true,
-      }
+      },
     ),
   ]),
 ];
